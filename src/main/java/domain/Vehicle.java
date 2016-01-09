@@ -12,15 +12,13 @@ import java.util.*;
 		@NamedQuery(name = "vehicle.getByID", query = "Select v from v.idVehicle = :idVehicle")
 
 })
-
-
 public class Vehicle {
 
 	private Long idVehicle;
 	private String name;
 	private String type;
 	private int speed;
-	
+
 	private List<Scout> Scout = new ArrayList<Scout>();
 
 	public Long getIdVehicle() {
@@ -54,6 +52,7 @@ public class Vehicle {
 	public void setSpeed(int speed) {
 		this.speed = speed;
 	}
+
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "vehicle")
 	@JsonIgnore
 	public List<Scout> getScout() {
