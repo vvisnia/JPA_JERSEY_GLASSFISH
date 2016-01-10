@@ -5,9 +5,9 @@ import javax.persistence.*;
 @Entity
 @NamedQueries({
 		@NamedQuery(name = "scout.getAll", query = "Select w from Scout w"),
-		@NamedQuery(name = "scout.getById", query = "Select w from Scout where w.Scout = :idScout"),
-		@NamedQuery(name = "scout.getByIdSoldier", query = "Select w from Scout where w.soldier = :idSoldier"),
-		@NamedQuery(name = "scout.getByIdVehicle", query = "Select w from Scout where w.vehicle = :idVehicle") })
+		@NamedQuery(name = "scout.getById", query = "Select w from Scout w where w.idScout = :idScout"),
+		@NamedQuery(name = "scout.getByIdSoldier", query = "Select w from Scout w where w.soldier = :idSoldier"),
+		@NamedQuery(name = "scout.getByIdVehicle", query = "Select w from Scout w where w.vehicle = :idVehicle") })
 public class Scout {
 
 	private Long idScout;

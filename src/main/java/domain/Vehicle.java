@@ -7,9 +7,10 @@ import javax.persistence.*;
 import java.util.*;
 
 @Entity
+@Table (name = "Vehicle")
 @NamedQueries({
 		@NamedQuery(name = "vehicle.getAll", query = "Select v from Vehicle v"),
-		@NamedQuery(name = "vehicle.getByID", query = "Select v from v.idVehicle = :idVehicle")
+		@NamedQuery(name = "vehicle.getByID", query = "Select v from Vehicle v where v.idVehicle = :idVehicle")
 
 })
 public class Vehicle {
@@ -20,7 +21,8 @@ public class Vehicle {
 	private int speed;
 
 	private List<Scout> Scout = new ArrayList<Scout>();
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getIdVehicle() {
 		return idVehicle;
 	}

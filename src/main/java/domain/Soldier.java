@@ -8,7 +8,7 @@ import java.util.*;
 @Table (name = "Soldier")
 @NamedQueries({
 	@NamedQuery(name = "soldier.getAll", query = "Select s from Soldier s"),
-	@NamedQuery(name = "soldier.getByID", query = "Select s from s.idSoldier = :idSoldier"),
+	@NamedQuery(name = "soldier.getByID", query = "Select s from Soldier s where s.idSoldier = :idSoldier"),
 	@NamedQuery(name = "soldier.isOfficer", query = "Select s from Soldier s where s.officer = true")
 })
 
