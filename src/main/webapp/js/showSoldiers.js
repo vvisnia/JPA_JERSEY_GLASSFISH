@@ -4,7 +4,8 @@ $(document).ready(function()
 
 {
 $.get("/aelo/rest/soldier/getAllSoldiers", function (data, textStatus)
-var table = document.getElementById('presentationTable')
+		{
+		var table = document.getElementById('presentationTable');
 for(var i in data){
 	
 	var row = document.createElement("tr");
@@ -49,6 +50,9 @@ for(var i in data){
 	cellDeleteLink.appendChild(cellDeletePicture);
 	cellDeleteLink.href = "../../deleteSoldier.html?id=" + data[i].idSoldier;
 	cellDelete.appendChild(cellDeleteLink);
+	
+	
+	
 	row.appendChild(cellID);
 	row.appendChild(cellFirstName);
 	row.appendChild(cellLastName);
@@ -61,7 +65,7 @@ for(var i in data){
 
 
 
-)};
+});
 
 
 
@@ -75,7 +79,7 @@ for(var i in data){
 
 
 
-);
+});
 
 
 

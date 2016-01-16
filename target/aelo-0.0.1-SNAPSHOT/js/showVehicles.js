@@ -3,36 +3,36 @@ $(document).ready(function()
 
 
 {
-$.get("/aelo/rest/soldier/getAllSoldiers", function (data, textStatus)
+$.get("/aelo/rest/vehicle/getAllVehicles", function (data, textStatus)
 		{
 		var table = document.getElementById('presentationTable');
 for(var i in data){
 	
 	var row = document.createElement("tr");
 	var cellID = document.createElement("td");
-	var cellIDText = document.createTextNode(data[i].idSoldier);
+	var cellIDText = document.createTextNode(data[i].idVehicle);
 	
-	var cellFirstName = document.createElement("td");
-	var cellFirstNameText = document.createTextNode(data[i].firstName);
+	var cellName = document.createElement("td");
+	var cellNameText = document.createTextNode(data[i].name);
 	
-	var cellLastName = document.createElement("td");
-	var cellLastNameText = document.createTextNode(data[i].lastName);
+	var cellType = document.createElement("td");
+	var cellTypeText = document.createTextNode(data[i].type);
 	
-	var cellRank = document.createElement("td");
-	var cellRankText = document.createTextNode(data[i].rank);
+	var cellSpeed = document.createElement("td");
+	var cellSpeedText = document.createTextNode(data[i].speed);
 	
 	
 	cellID.appendChild(cellIDText);
-	cellFirstName.appendChild(cellFirstNameText);
-	cellLastName.appendChild(cellLastNameText);
-	cellRank.appendChild(cellRankText);
+	cellName.appendChild(cellNameText);
+	cellType.appendChild(cellTypeText);
+	cellSpeed.appendChild(cellSpeedText);
 	
 	var cellRead = document.createElement("td");
 	var cellReadLink = document.createElement("a");
 	var cellReadPicture = document.createElement("img");
 	cellReadPicture.setAttribute('src', '/graphics/select.png');
 	cellReadLink.appendChild(cellReadPicture);
-	cellReadLink.href = "../../readSoldier.html?id=" + data[i].idSoldier;
+	cellReadLink.href = "../../readVehicle.html?id=" + data[i].idVehicle;
 	cellRead.appendChild(cellReadLink);
 	
 	var cellUpdate = document.createElement("td");
@@ -40,7 +40,7 @@ for(var i in data){
 	var cellUpdatePicture = document.createElement("img");
 	cellUpdatePicture.setAttribute('src', '/graphics/update.png');
 	cellUpdateLink.appendChild(cellUpdatePicture);
-	cellUpdateLink.href = "../../updateSoldier.html?id=" + data[i].idSoldier;
+	cellUpdateLink.href = "../../updateVehicle.html?id=" + data[i].idVehicle;
 	cellUpdate.appendChild(cellUpdateLink);
 
 	var cellDelete = document.createElement("td");
@@ -48,15 +48,15 @@ for(var i in data){
 	var cellDeletePicture = document.createElement("img");
 	cellDeletePicture.setAttribute('src', '/graphics/delete2.png');
 	cellDeleteLink.appendChild(cellDeletePicture);
-	cellDeleteLink.href = "../../deleteSoldier.html?id=" + data[i].idSoldier;
+	cellDeleteLink.href = "../../deleteVehicle.html?id=" + data[i].idVehicle;
 	cellDelete.appendChild(cellDeleteLink);
 	
 	
 	
 	row.appendChild(cellID);
-	row.appendChild(cellFirstName);
-	row.appendChild(cellLastName);
-	row.appendChild(cellRank);
+	row.appendChild(cellName);
+	row.appendChild(cellType);
+	row.appendChild(cellSpeed);
 	row.appendChild(cellRead);
 	row.appendChild(cellUpdate);
 	row.appendChild(cellDelete);

@@ -8,8 +8,7 @@ import java.util.*;
 @Table (name = "Soldier")
 @NamedQueries({
 	@NamedQuery(name = "soldier.getAll", query = "Select s from Soldier s"),
-	@NamedQuery(name = "soldier.getByID", query = "Select s from Soldier s where s.idSoldier = :idSoldier"),
-	@NamedQuery(name = "soldier.isOfficer", query = "Select s from Soldier s where s.officer = true")
+	@NamedQuery(name = "soldier.getByID", query = "Select s from Soldier s where s.idSoldier = :idSoldier")
 })
 
 public class Soldier {
@@ -17,7 +16,7 @@ public class Soldier {
 	private String firstName;
 	private String lastName;
 	private String rank;
-	private Boolean officer = false;
+
 	
 	private List<Scout> Scout = new ArrayList<Scout>();
 	
@@ -48,12 +47,7 @@ public class Soldier {
 	public void setRank(String rank) {
 		this.rank = rank;
 	}
-	public Boolean getOfficer() {
-		return officer;
-	}
-	public void setOfficer(Boolean officer) {
-		this.officer = officer;
-	}
+
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "soldier")
 	@JsonIgnore

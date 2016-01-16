@@ -1,6 +1,6 @@
 package service;
 
-import org.hibernate.*;
+
 
 import dao.SoldierDAO;
 import domain.Soldier;
