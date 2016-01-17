@@ -27,7 +27,22 @@ public class SoldierResource {
 		soldierManager.addSoldier(soldier);
 		return Response.status(Response.Status.CREATED).build();
 	}
-
+	
+	@POST
+	@Path("/updateSoldier")
+	public Response updateSoldier(@FormParam("idSoldier") long idSoldier,
+			@FormParam("firstName") String firstName,
+			@FormParam("lastName") String lastName,
+			@FormParam("rank") String rank) {
+		Soldier soldier = new Soldier();
+		soldier.setIdSoldier(idSoldier);
+		soldier.setFirstName(firstName);
+		soldier.setLastName(lastName);
+		soldier.setRank(rank);
+		soldierManager.updateSoldier(soldier);
+		return Response.status(Response.Status.CREATED).build();
+	}
+	
 	@GET
 	@Path("/getAllSoldiers")
 	@Produces(MediaType.APPLICATION_JSON)

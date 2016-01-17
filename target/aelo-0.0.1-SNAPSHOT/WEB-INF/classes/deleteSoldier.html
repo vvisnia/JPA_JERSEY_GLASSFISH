@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Kasowanie żołnierza</title>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script src="js/deleteSoldier.js"></script>
+</head>
+<body>
+	<div class="navbar">
+
+		<div class="navbuttons">
+			<div class="navbuttonhome">
+				<a href="index.html"><img src="graphics/home.png"
+					class="navbuttonhome"></a>
+			</div>
+			<div class="navbutton">
+				<a href="showScouts.html"><img src="graphics/unit.png"
+					class="navbutton"></a>
+			</div>
+			<div class="navbutton">
+				<a href="showSoldiers.html"><img src="graphics/soldier.png"
+					class="navbutton"></a>
+			</div>
+			<div class="navbutton">
+				<a href="showVehicles.html"><img src="graphics/vehicle.png"
+					class="navbutton"></a>
+			</div>
+		</div>
+	</div>
+	<form action="/aelo/rest/soldier/deleteSoldier" method="post">
+		<input type="text" id="idSoldierId" name="idSoldier"
+			style="visibility: hidden;" />
+		<table class="operationtable">
+			<tr class='tableheader'>
+				<td colspan='2'>Kasnowanie zołnierza</td>
+			</tr>
+
+			<tr>
+				<td>ID:</td>
+				<td id="id"></td>
+			</tr>
+			<tr>
+				<td>Imię:</td>
+				<td id="firstName"></td>
+			</tr>
+			<tr>
+				<td>Nazwisko:</td>
+				<td id="lastName"></td>
+			</tr>
+			<tr>
+				<td>Stopień:</td>
+				<td id="rank"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Akceptuj"
+					align="right"></td>
+			</tr>
+		</table>
+
+	</form>
+</body>
+</html>
