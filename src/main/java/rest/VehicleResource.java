@@ -27,7 +27,20 @@ public class VehicleResource {
 		vehicleManager.addVehicle(vehicle);
 		return Response.status(Response.Status.CREATED).build();
 	}
-
+	@POST
+	@Path("/updateVehicle")
+	public Response updateVehicle(@FormParam("idVehicle") long idVehicle,
+			@FormParam("name") String name,
+			@FormParam("type") String type,
+			@FormParam("speed") int speed) {
+		Vehicle vehicle = new Vehicle();
+		vehicle.setIdVehicle(idVehicle);
+		vehicle.setName(name);
+		vehicle.setType(type);
+		vehicle.setSpeed(speed);
+		vehicleManager.updateVehicle(vehicle);
+		return Response.status(Response.Status.CREATED).build();
+	}
 	@GET
 	@Path("/getAllVehicles")
 	@Produces(MediaType.APPLICATION_JSON)

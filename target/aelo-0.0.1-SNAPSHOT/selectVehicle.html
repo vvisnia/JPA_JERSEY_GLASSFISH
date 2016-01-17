@@ -2,9 +2,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="style.css">
-<title>Przegląd żołnierza</title>
+<title>Przegląd pojazdu</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-<script src="js/selectSoldier.js"></script>
+<script src="js/selectVehicle.js"></script>
 </head>
 <body>
 	<div class="navbar">
@@ -28,11 +28,11 @@
 			</div>
 		</div>
 	</div>
-	<form action="showSoldiers.html" method="post">
+	<form action="showVehicles.html" method="post">
 
 		<table class="operationtable">
 			<tr class='tableheader'>
-				<td colspan='2'>Przegląd żołnierza</td>
+				<td colspan='2'>Przegląd pojazdu</td>
 			</tr>
 
 			<tr>
@@ -40,16 +40,16 @@
 				<td id="id"></td>
 			</tr>
 			<tr>
-				<td>Imię:</td>
-				<td id="firstName"></td>
+				<td>Nazwa:</td>
+				<td id="name"></td>
 			</tr>
 			<tr>
-				<td>Nazwisko:</td>
-				<td id="lastName"></td>
+				<td>Typ:</td>
+				<td id="type"></td>
 			</tr>
 			<tr>
-				<td>Stopień:</td>
-				<td id="rank"></td>
+				<td>Prędkość:</td>
+				<td id="speed"></td>
 			</tr>
 			<tr>
 				<td colspan="2"><input type="submit" value="Wróć"

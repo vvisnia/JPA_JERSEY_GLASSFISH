@@ -2,9 +2,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="style.css">
-<title>Przegląd żołnierza</title>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-<script src="js/selectSoldier.js"></script>
+<title>Kasowanie pojazdu</title>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script src="js/deleteVehicle.js"></script>
 </head>
 <body>
 	<div class="navbar">
@@ -28,11 +28,12 @@
 			</div>
 		</div>
 	</div>
-	<form action="showSoldiers.html" method="post">
-
+	<form action="/aelo/rest/vehicle/deleteVehicle" method="post">
+		<input type="text" id="idVehicleId" name="idVehicle"
+			style="visibility: hidden;" />
 		<table class="operationtable">
 			<tr class='tableheader'>
-				<td colspan='2'>Przegląd żołnierza</td>
+				<td colspan='2'>Kasnowanie pojazdu</td>
 			</tr>
 
 			<tr>
@@ -40,19 +41,19 @@
 				<td id="id"></td>
 			</tr>
 			<tr>
-				<td>Imię:</td>
-				<td id="firstName"></td>
+				<td>Nazwa:</td>
+				<td id="name"></td>
 			</tr>
 			<tr>
-				<td>Nazwisko:</td>
-				<td id="lastName"></td>
+				<td>Typ:</td>
+				<td id="type"></td>
 			</tr>
 			<tr>
-				<td>Stopień:</td>
-				<td id="rank"></td>
+				<td>Prędkość:</td>
+				<td id="speed"></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="Wróć"
+				<td colspan="2"><input type="submit" value="Akceptuj"
 					align="right"></td>
 			</tr>
 		</table>

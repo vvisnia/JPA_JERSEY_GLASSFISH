@@ -30,25 +30,25 @@ for(var i in data){
 	var cellRead = document.createElement("td");
 	var cellReadLink = document.createElement("a");
 	var cellReadPicture = document.createElement("img");
-	cellReadPicture.setAttribute('src', '/graphics/select.png');
+	cellReadPicture.setAttribute('src', '/aelo/graphics/select.png');
 	cellReadLink.appendChild(cellReadPicture);
-	cellReadLink.href = "../../readVehicle.html?id=" + data[i].idVehicle;
+	cellReadLink.href = "../aelo/selectVehicle.html?id=" + data[i].idVehicle;
 	cellRead.appendChild(cellReadLink);
 	
 	var cellUpdate = document.createElement("td");
 	var cellUpdateLink = document.createElement("a");
 	var cellUpdatePicture = document.createElement("img");
-	cellUpdatePicture.setAttribute('src', '/graphics/update.png');
+	cellUpdatePicture.setAttribute('src', '/aelo/graphics/update.png');
 	cellUpdateLink.appendChild(cellUpdatePicture);
-	cellUpdateLink.href = "../../updateVehicle.html?id=" + data[i].idVehicle;
+	cellUpdateLink.href = "../aelo/updateVehicle.html?id=" + data[i].idVehicle;
 	cellUpdate.appendChild(cellUpdateLink);
 
 	var cellDelete = document.createElement("td");
 	var cellDeleteLink = document.createElement("a");
 	var cellDeletePicture = document.createElement("img");
-	cellDeletePicture.setAttribute('src', '/graphics/delete2.png');
+	cellDeletePicture.setAttribute('src', '/aelo/graphics/delete2.png');
 	cellDeleteLink.appendChild(cellDeletePicture);
-	cellDeleteLink.href = "../../deleteVehicle.html?id=" + data[i].idVehicle;
+	cellDeleteLink.href = "../aelo/deleteVehicle.html?id=" + data[i].idVehicle;
 	cellDelete.appendChild(cellDeleteLink);
 	
 	
