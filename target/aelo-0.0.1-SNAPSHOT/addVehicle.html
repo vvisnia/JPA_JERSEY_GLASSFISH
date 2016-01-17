@@ -1,14 +1,12 @@
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="style.css">
-<title>Armia Wściekłych Lisów</title>
+<title>Dodawanie pojazdu</title>
 </head>
 <body>
 	<div class="navbar">
+
 		<div class="navbuttons">
 			<div class="navbuttonhome">
 				<a href="index.html"><img src="graphics/home.png"
@@ -27,7 +25,29 @@
 					class="navbutton"></a>
 			</div>
 		</div>
-		<p class="bigheader">Armia Wściekłych Lisów</p>
-		<p class="smallheader">Użyj menu, by poruszać się po stronie.</p>
+	</div>
+	<form action="/aelo/rest/vehicle/addVehicle" method="post">
+		<table class="operationtable">
+			<tr class='tableheader'>
+				<td colspan='2'>Dodawanie pojazdu</td>
+			</tr>
+			<tr>
+				<td>Nazwa:</td>
+				<td><input type="text" name="name" /></td>
+			</tr>
+			<tr>
+				<td>Typ:</td>
+				<td><input type="text" name="type" /></td>
+			</tr>
+			<tr>
+				<td>Prędkość:</td>
+				<td><input type="text" name="speed" /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Akceptuj"
+					align="right"></td>
+			</tr>
+		</table>
+	</form>
 </body>
 </html>

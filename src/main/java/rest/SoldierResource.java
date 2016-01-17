@@ -44,7 +44,7 @@ public class SoldierResource {
 
 	@POST
 	@Path("/deleteSoldier")
-	public Response deletesoldier(@FormParam("idSoldier") long idSoldier) {
+	public Response deleteSoldier(@FormParam("idSoldier") long idSoldier) {
 		Soldier soldier = new Soldier();
 		soldier.setIdSoldier(idSoldier);
 		soldierManager.deleteSoldier(soldier);

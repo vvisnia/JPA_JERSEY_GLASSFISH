@@ -11,7 +11,7 @@ import javax.persistence.*;
 public class Scout {
 
 	private Long idScout;
-	private String Notes;
+	private String notes;
 
 	private Soldier soldier;
 	private Vehicle vehicle;
@@ -27,11 +27,11 @@ public class Scout {
 	}
 
 	public String getNotes() {
-		return Notes;
+		return notes;
 	}
 
 	public void setNotes(String notes) {
-		Notes = notes;
+		this.notes = notes;
 	}
 
 	@ManyToOne

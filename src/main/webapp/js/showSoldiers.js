@@ -32,7 +32,7 @@ for(var i in data){
 	var cellReadPicture = document.createElement("img");
 	cellReadPicture.setAttribute('src', '/graphics/select.png');
 	cellReadLink.appendChild(cellReadPicture);
-	cellReadLink.href = "../../readSoldier.html?id=" + data[i].idSoldier;
+	cellReadLink.href = "readSoldier.html?id=" + data[i].idSoldier;
 	cellRead.appendChild(cellReadLink);
 	
 	var cellUpdate = document.createElement("td");
@@ -40,7 +40,7 @@ for(var i in data){
 	var cellUpdatePicture = document.createElement("img");
 	cellUpdatePicture.setAttribute('src', '/graphics/update.png');
 	cellUpdateLink.appendChild(cellUpdatePicture);
-	cellUpdateLink.href = "../../updateSoldier.html?id=" + data[i].idSoldier;
+	cellUpdateLink.href = "updateSoldier.html?id=" + data[i].idSoldier;
 	cellUpdate.appendChild(cellUpdateLink);
 
 	var cellDelete = document.createElement("td");
@@ -48,7 +48,7 @@ for(var i in data){
 	var cellDeletePicture = document.createElement("img");
 	cellDeletePicture.setAttribute('src', '/graphics/delete2.png');
 	cellDeleteLink.appendChild(cellDeletePicture);
-	cellDeleteLink.href = "../../deleteSoldier.html?id=" + data[i].idSoldier;
+	cellDeleteLink.href = "deleteSoldier.html?id=" + data[i].idSoldier;
 	cellDelete.appendChild(cellDeleteLink);
 	
 	

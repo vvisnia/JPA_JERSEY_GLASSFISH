@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Dodawanie zwiadu</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script src="js/addScout.js"></script>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+</head>
+<body>
+	<div class="navbar">
+
+		<div class="navbuttons">
+			<div class="navbuttonhome">
+				<a href="index.html"><img src="graphics/home.png"
+					class="navbuttonhome"></a>
+			</div>
+			<div class="navbutton">
+				<a href="showScouts.html"><img src="graphics/unit.png"
+					class="navbutton"></a>
+			</div>
+			<div class="navbutton">
+				<a href="showSoldiers.html"><img src="graphics/soldier.png"
+					class="navbutton"></a>
+			</div>
+			<div class="navbutton">
+				<a href="showVehicles.html"><img src="graphics/vehicle.png"
+					class="navbutton"></a>
+			</div>
+		</div>
+	</div>
+	<form action="/aelo/rest/scout/addScout" method="post">
+		<table class="operationtable">
+			<tr class='tableheader'>
+				<td colspan='2'>Dodawanie zwiadu</td>
+			</tr>
+			<tr>
+				<td>Notatki:</td>
+				<td><input type="text" name="notes" /></td>
+			</tr>
+			<tr>
+				<td>Zolnierz:</td>
+				<td><select name="soldier" id="soldierId">
+				</select></td>
+			</tr>
+			<tr>
+				<td>Pojazd:</td>
+				<td><select name="vehicle" id="vehicleId"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Akceptuj"
+					align="right"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

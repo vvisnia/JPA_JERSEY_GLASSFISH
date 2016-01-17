@@ -44,7 +44,7 @@ public class VehicleResource {
 
 	@POST
 	@Path("/deleteVehicle")
-	public Response deletevehicle(@FormParam("idVehicle") long idVehicle) {
+	public Response deleteVehicle(@FormParam("idVehicle") long idVehicle) {
 		Vehicle vehicle = new Vehicle();
 		vehicle.setIdVehicle(idVehicle);
 		vehicleManager.deleteVehicle(vehicle);

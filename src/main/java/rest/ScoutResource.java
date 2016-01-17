@@ -21,15 +21,15 @@ public class ScoutResource {
 
 	@POST
 	@Path("/addScout")
-	public Response addScout(@FormParam("Notes") String Notes,
+	public Response addScout(@FormParam("notes") String notes,
 			@FormParam("soldier") String soldier,
 			@FormParam("vehicle") String vehicle) {
 		Long soldierId = Long.parseLong(soldier.substring(0,
-				soldier.indexOf('.')));
+				soldier.indexOf(':')));
 		Long vehicleId = Long.parseLong(vehicle.substring(0,
-				vehicle.indexOf('.')));
+				vehicle.indexOf(':')));
 		Scout scout = new Scout();
-		scout.setNotes(Notes);
+		scout.setNotes(notes);
 
 		scout.setSoldier(soldierManager.getSoldierById(soldierId));
 		scout.setVehicle(vehicleManager.getVehicleById(vehicleId));
@@ -53,7 +53,7 @@ public class ScoutResource {
 
 	@POST
 	@Path("/deleteScout")
-	public Response deletescout(@FormParam("idScout") long idScout) {
+	public Response deleteScout(@FormParam("idScout") long idScout) {
 		Scout scout = new Scout();
 		scout.setIdScout(idScout);
 		scoutManager.deleteScout(scout);
