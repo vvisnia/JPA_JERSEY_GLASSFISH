@@ -36,6 +36,26 @@ public class ScoutResource {
 		scoutManager.addScout(scout);
 		return Response.status(Response.Status.CREATED).build();
 	}
+	
+	@POST
+	@Path("/updateScout")
+	public Response updateScout(@FormParam("idScout") long idScout,
+			@FormParam("notes") String notes,
+			@FormParam("soldier") String soldier,
+			@FormParam("vehicle") String vehicle) {
+		Long soldierId = Long.parseLong(soldier.substring(0,
+				soldier.indexOf(':')));
+		Long vehicleId = Long.parseLong(vehicle.substring(0,
+				vehicle.indexOf(':')));
+		Scout scout = new Scout();
+		scout.setIdScout(idScout);
+		scout.setNotes(notes);
+
+		scout.setSoldier(soldierManager.getSoldierById(soldierId));
+		scout.setVehicle(vehicleManager.getVehicleById(vehicleId));
+		scoutManager.updateScout(scout);
+		return Response.status(Response.Status.CREATED).build();
+	}
 
 	@GET
 	@Path("/getAllScouts")

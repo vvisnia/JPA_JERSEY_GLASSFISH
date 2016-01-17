@@ -27,13 +27,13 @@ for(var i in data){
 	cellType.appendChild(cellTypeText);
 	cellSpeed.appendChild(cellSpeedText);
 	
-	var cellRead = document.createElement("td");
-	var cellReadLink = document.createElement("a");
-	var cellReadPicture = document.createElement("img");
-	cellReadPicture.setAttribute('src', '/aelo/graphics/select.png');
-	cellReadLink.appendChild(cellReadPicture);
-	cellReadLink.href = "../aelo/selectVehicle.html?id=" + data[i].idVehicle;
-	cellRead.appendChild(cellReadLink);
+	var cellSelect = document.createElement("td");
+	var cellSelectLink = document.createElement("a");
+	var cellSelectPicture = document.createElement("img");
+	cellSelectPicture.setAttribute('src', '/aelo/graphics/select.png');
+	cellSelectLink.appendChild(cellSelectPicture);
+	cellSelectLink.href = "../aelo/selectVehicle.html?id=" + data[i].idVehicle;
+	cellSelect.appendChild(cellSelectLink);
 	
 	var cellUpdate = document.createElement("td");
 	var cellUpdateLink = document.createElement("a");
@@ -57,7 +57,7 @@ for(var i in data){
 	row.appendChild(cellName);
 	row.appendChild(cellType);
 	row.appendChild(cellSpeed);
-	row.appendChild(cellRead);
+	row.appendChild(cellSelect);
 	row.appendChild(cellUpdate);
 	row.appendChild(cellDelete);
 	table.appendChild(row);
