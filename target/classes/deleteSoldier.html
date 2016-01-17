@@ -4,6 +4,17 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <title>Kasowanie żołnierza</title>
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+   
+    <script src="http://malsup.github.com/jquery.form.js"></script> 
+    <script>  
+        $(document).ready(function() {        
+           $('#aelo').ajaxForm(function() { 
+               alert("Skasowano żołnierza!"); 
+            	 window.location.href = 'http://localhost:8080/aelo/showSoldiers.html'            
+           }); 
+       }); 
+    </script> 
+   
 <script src="js/deleteSoldier.js"></script>
 </head>
 <body>
@@ -28,7 +39,7 @@
 			</div>
 		</div>
 	</div>
-	<form action="/aelo/rest/soldier/deleteSoldier" method="post">
+	<form id="aelo" action="/aelo/rest/soldier/deleteSoldier" method="post">
 		<input type="text" id="idSoldierId" name="idSoldier"
 			style="visibility: hidden;" />
 		<table class="operationtable">

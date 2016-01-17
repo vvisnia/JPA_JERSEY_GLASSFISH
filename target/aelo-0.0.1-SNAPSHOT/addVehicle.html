@@ -3,6 +3,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="style.css">
 <title>Dodawanie pojazdu</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+ <script src="http://malsup.github.com/jquery.form.js"></script> 
+    <script>  
+        $(document).ready(function() {        
+           $('#aelo').ajaxForm(function() { 
+               alert("Dodano pojazd!"); 
+            	 window.location.href = 'http://localhost:8080/aelo/showVehicles.html'            
+           }); 
+       }); 
+    </script> 
 </head>
 <body>
 	<div class="navbar">
@@ -26,7 +37,7 @@
 			</div>
 		</div>
 	</div>
-	<form action="/aelo/rest/vehicle/addVehicle" method="post">
+	<form id="aelo" action="/aelo/rest/vehicle/addVehicle" method="post">
 		<table class="operationtable">
 			<tr class='tableheader'>
 				<td colspan='2'>Dodawanie pojazdu</td>

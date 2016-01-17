@@ -4,6 +4,17 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <title>Kasowanie pojazdu</title>
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+   
+    <script src="http://malsup.github.com/jquery.form.js"></script> 
+    <script>  
+        $(document).ready(function() {        
+           $('#aelo').ajaxForm(function() { 
+               alert("Skasowano pojazd!"); 
+            	 window.location.href = 'http://localhost:8080/aelo/showVehicles.html'            
+           }); 
+       }); 
+    </script> 
+   
 <script src="js/deleteVehicle.js"></script>
 </head>
 <body>
@@ -28,7 +39,7 @@
 			</div>
 		</div>
 	</div>
-	<form action="/aelo/rest/vehicle/deleteVehicle" method="post">
+	<form id="aelo" action="/aelo/rest/vehicle/deleteVehicle" method="post">
 		<input type="text" id="idVehicleId" name="idVehicle"
 			style="visibility: hidden;" />
 		<table class="operationtable">

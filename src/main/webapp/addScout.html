@@ -10,6 +10,15 @@
 	href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+ <script src="http://malsup.github.com/jquery.form.js"></script> 
+    <script>  
+        $(document).ready(function() {        
+           $('#aelo').ajaxForm(function() { 
+               alert("Dodano zwiad!"); 
+            	 window.location.href = 'http://localhost:8080/aelo/showScouts.html'            
+           }); 
+       }); 
+    </script> 
 
 </head>
 <body>
@@ -34,7 +43,7 @@
 			</div>
 		</div>
 	</div>
-	<form action="/aelo/rest/scout/addScout" method="post">
+	<form id="aelo" action="/aelo/rest/scout/addScout" method="post">
 		<table class="operationtable">
 			<tr class='tableheader'>
 				<td colspan='2'>Dodawanie zwiadu</td>

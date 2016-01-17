@@ -4,6 +4,15 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <title>Edycja żołnierza</title>
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+   <script src="http://malsup.github.com/jquery.form.js"></script> 
+    <script>  
+        $(document).ready(function() {        
+           $('#aelo').ajaxForm(function() { 
+               alert("Zaktualizowano żołnierza!"); 
+            	 window.location.href = 'http://localhost:8080/aelo/showSoldiers.html'            
+           }); 
+       }); 
+    </script> 
 <script src="js/updateSoldier.js"></script>
 </head>
 <body>
@@ -28,7 +37,7 @@
 			</div>
 		</div>
 	</div>
-	<form action="/aelo/rest/soldier/updateSoldier" method="post">
+	<form id="aelo" action="/aelo/rest/soldier/updateSoldier" method="post">
 		<input type="text" id="idSoldierId" name="idSoldier"
 			style="visibility: hidden;" />
 		<table class="operationtable">
